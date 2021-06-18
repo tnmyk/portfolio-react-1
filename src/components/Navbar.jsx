@@ -5,7 +5,7 @@ const Navbar = () => {
   const [menuOn, setMenuOn] = useState(false);
   return (
     <div>
-      <Menu menuOn={menuOn}/>
+      <Menu menuOn={menuOn} />
       <header>
         <Link to="/" className="logo">
           TANMAY KACHROO
@@ -17,9 +17,17 @@ const Navbar = () => {
         <div
           className="menuImg"
           onClick={() => {
+            const body = document.querySelector("body");
+            if (body.style.height === "100vh") {
+              body.style.height = "auto";
+              body.style.overflowY = "visible";
+            } else {
+              body.style.height = "100vh";
+              body.style.overflowY = "hidden";
+            }
             setMenuOn(!menuOn);
           }}
-          style={menuOn?{backgroundImage:'url(./menu-cross.svg)'}:null}
+          style={menuOn ? { backgroundImage: "url(./menu-cross.svg)" } : null}
         ></div>
       </header>
     </div>

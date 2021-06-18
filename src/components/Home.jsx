@@ -3,7 +3,9 @@ import Tool from "./Tool";
 import Project from "./Project";
 import projects from "../projects";
 import { Link } from "react-router-dom";
+import SocialFlex from "./SocialLinks";
 
+import { SiMinutemailer } from "react-icons/si";
 
 const Home = () => {
   return (
@@ -54,12 +56,7 @@ const Home = () => {
         <div className="slide-heading">Contact Me</div>
         <div className="slide-subheading">Let's Build Something Together</div>
         <div className="contact-flex">
-          <div className="social-flex">
-            <div className="email">Email: tanmaykachroo@gmail.coms</div>
-            <div className="linkedin">Linkedin</div>
-            <div className="linkedin">Twitter</div>
-            
-          </div>
+          <SocialFlex/>
           <div className="contact-form-flex">
             <h2>Send me a Message!</h2>
             <form
@@ -88,7 +85,10 @@ const Home = () => {
                 placeholder="Message"
                 required
               ></textarea>
-              <button>Send</button>
+              <button>
+                Send &nbsp;
+                <SiMinutemailer />
+              </button>
             </form>
           </div>
         </div>
