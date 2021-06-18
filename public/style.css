@@ -205,13 +205,58 @@ header {
 }
 .project,
 .seemore {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 35vh;
   width: 24vw;
   border-radius: 10px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.774);
+  color: white;
+  background-color: rgb(51, 51, 51);
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+  transform-style: preserve-3d;
 }
+.project:hover,
+.seemore:hover {
+  transform: scale(1.05);
+}
+.project::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  background-image: linear-gradient(to right ,purple,cyan,yellow);
+  background-size: 200%;
+  animation: after-animate 2s linear infinite alternate;
+}
+@keyframes after-animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
+.seemore{
+  border: 1px solid gray;
+  background-image: url('./afterbackground.gif');
+  background-position: center;
+}
+/* .seemore::after{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  background-image: url('./afterbackground.gif');
+  background-position: 50%;
+  transform: translateZ(-2px);
+} */
+
 .seemore {
   display: flex;
   align-items: center;
@@ -245,14 +290,14 @@ header {
   margin-right: 8px;
 }
 
-.slide-subheading{
+.slide-subheading {
   position: absolute;
   top: 14vh;
   left: 4vw;
   font-weight: 400;
   font-size: 1.3rem;
 }
-.contact-flex{
+.contact-flex {
   display: flex;
   height: 70vh;
   width: 90%;
@@ -264,7 +309,8 @@ header {
   left: 50%;
   transform: translateX(-50%);
 }
-.social-flex,.contact-form-flex{
+.social-flex,
+.contact-form-flex {
   display: flex;
   /* align-items: center; */
   justify-content: center;
@@ -273,25 +319,25 @@ header {
   height: 70vh;
   /* background-color: khaki; */
 }
-.contact-form-flex{
+.contact-form-flex {
   align-items: center;
 }
-.contact-form{
+.contact-form {
   display: flex;
   /* align-items: center; */
   justify-content: space-evenly;
   flex-direction: column;
   height: 60vh;
 }
-.contact-form input,.textarea{
+.contact-form input,
+.textarea {
   padding: 0.3rem 0.4rem;
   font-size: 1rem;
   border: none;
   border-radius: 7px;
   border: 1px solid black;
-
 }
-.contact-form button{
+.contact-form button {
   width: 80px;
   height: 30px;
   border: none;
@@ -307,14 +353,14 @@ header {
   height: 20vh;
   width: 300px;
 }
-.social-flex{
+.social-flex {
   background-color: lightcoral;
   width: 40%;
   display: flex;
   justify-content: space-evenly;
   height: 40vh;
 }
-.social-flex div{
+.social-flex div {
   background-color: black;
   color: white;
   width: max-content;
