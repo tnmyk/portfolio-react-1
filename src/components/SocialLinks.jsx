@@ -5,21 +5,21 @@ import { HiOutlineMail } from "react-icons/hi";
 const SocialFlex = () => {
   return (
     <div className="social-flex">
-      <div className="email">
+      <a className="email">
         <HiOutlineMail /> &nbsp;Email: tanmaykachroo@gmail.com
-      </div>
-      <div className="social">
+      </a>
+      <a href="https://github.com/tanmayk5" target="_blank" className="social">
         <GrGithub />
         &nbsp;Github
-      </div>
-      <div className="social">
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" className="social">
         <FaLinkedinIn />
         &nbsp;Linkedin
-      </div>
-      <div className="social">
+      </a>
+      <a href="https://www.twitter.com/" target="_blank" className="social">
         <RiTwitterFill />
         &nbsp;Twitter
-      </div>
+      </a>
     </div>
   );
 };
