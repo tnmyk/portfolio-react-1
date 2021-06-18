@@ -4,6 +4,7 @@ import Project from "./Project";
 import projects from "../projects";
 import { Link } from "react-router-dom";
 
+
 const Home = () => {
   return (
     <div className="home">
@@ -16,8 +17,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="tools slide">
-        <div className="tools-heading">Tech Tools</div>
+      <div className="slide">
+        <div className="slide-heading">Tech Tools</div>
         <div className="tools-container">
           <Tool width="70" toolname="Firebase" />
           <Tool width="80" toolname="React.js" />
@@ -27,11 +28,11 @@ const Home = () => {
           <Tool width="79" toolname="CSS" />
         </div>
         <div className="preferred-stack">
-          Preferred Stack : Firebase, Express.js ,React.js, Node.js
+          Preferred Stack : Firebase, Express.js, React.js, Node.js
         </div>
       </div>
-      <div className="projects slide">
-        <div className="projects-heading">Projects</div>
+      <div className="slide">
+        <div className="slide-heading">Projects</div>
         <div className="projects-grid">
           {projects.map((project) => {
             return (
@@ -43,7 +44,53 @@ const Home = () => {
               />
             );
           })}
-          <Link to='/projects' className='seemore'> See More {'>'}</Link>
+          <Link to="/projects" className="seemore">
+            {" "}
+            See More {">"}
+          </Link>
+        </div>
+      </div>
+      <div className="slide">
+        <div className="slide-heading">Contact Me</div>
+        <div className="slide-subheading">Let's Build Something Together</div>
+        <div className="contact-flex">
+          <div className="social-flex">
+            <div className="email">Email: tanmaykachroo@gmail.coms</div>
+            <div className="linkedin">Linkedin</div>
+            <div className="linkedin">Twitter</div>
+            
+          </div>
+          <div className="contact-form-flex">
+            <h2>Send me a Message!</h2>
+            <form
+              className="contact-form"
+              action="https://formsubmit.co/tanmaykachroo@gmail.com"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_next"
+                value="https://tanmayreactport.vercel.app/"
+              ></input>
+              <input type="hidden" name="_captcha" value="false"></input>
+              <input type="hidden" name="_template" value="table"></input>
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+
+              <textarea
+                name="message"
+                className="textarea"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button>Send</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
