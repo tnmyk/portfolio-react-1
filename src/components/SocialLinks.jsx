@@ -5,7 +5,7 @@ import { HiOutlineMail } from "react-icons/hi";
 const SocialFlex = () => {
   return (
     <div className="social-flex">
-      <a href="#" className="email">
+      <a href="/" className="email">
         <HiOutlineMail /> &nbsp;Email: tanmaykachroo@gmail.com
       </a>
       <a
