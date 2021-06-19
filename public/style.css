@@ -11,13 +11,13 @@
   -webkit-tap-highlight-color: none;
   /* cursor:none; */
 }
-#cursor{
+#cursor {
   width: 15px;
   height: 15px;
-  border: 2px solid black ;
+  border: 2px solid black;
   border-radius: 50%;
   position: fixed;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 1111;
   /* mix-blend-mode:difference; */
   pointer-events: none;
@@ -35,11 +35,9 @@
   width: 100%;
   z-index: -1000;
   opacity: 0.4;
-  
 }
-body{
+body {
   min-height: 100vh;
-  
 }
 a {
   color: inherit;
@@ -57,6 +55,11 @@ header {
 .logo {
   font-size: 1.4rem;
   font-weight: 600;
+  letter-spacing: 1px;
+  transition: letter-spacing 0.5s;
+}
+.logo:hover {
+  letter-spacing: 2px;
 }
 .nav-links {
   display: flex;
@@ -111,6 +114,7 @@ header {
   font-weight: 600;
   margin-bottom: 2vh;
   position: relative;
+  transition: letter-spacing 0.5s;
 }
 .menu-second a::after {
   content: "";
@@ -121,6 +125,9 @@ header {
   bottom: 0;
   left: 0;
   transition: width 0.3s ease-in-out;
+}
+.menu-second a:hover {
+  letter-spacing: 2px;
 }
 .menu-second a:hover::after {
   width: 100%;
@@ -134,7 +141,6 @@ header {
   height: 100vh;
 }
 .slide {
-
   width: 100%;
   height: 100vh;
   position: relative;
@@ -217,7 +223,7 @@ header {
   grid-template-columns: repeat(3, minmax(250px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.projects-page-grid{
+.projects-page-grid {
   height: auto;
   position: relative;
   margin-top: 4vh;
@@ -232,11 +238,10 @@ header {
   background-color: rgba(255, 255, 255, 0.774);
   color: white;
   background-color: rgb(51, 51, 51);
-  transition:  0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   overflow: hidden;
   cursor: pointer;
 }
-
 
 .project::after {
   content: "";
@@ -245,22 +250,28 @@ header {
   width: 100%;
   height: 7px;
   overflow: hidden;
-  background-image: linear-gradient(to right ,purple,cyan,yellow);
+  background-image: linear-gradient(to right, purple, cyan, yellow);
   background-size: 200%;
   animation: after-animate 2s linear infinite alternate;
 }
 @keyframes after-animate {
-  0%{
+  0% {
     background-position: left;
   }
-  100%{
+  100% {
     background-position: right;
   }
 }
-.seemore{
+.seemore {
   border: 1px solid gray;
-  background-image: url('./afterbackground.gif');
+  background-image: url("./afterbackground.gif");
   background-position: center;
+  transition: 0.5s;
+  letter-spacing: 2px;
+}
+.seemore:hover {
+  letter-spacing: 3px;
+  color: black;
 }
 /* .seemore::after{
   content: "";
@@ -369,6 +380,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s;
+}
+.contact-form button:hover {
+  letter-spacing: 2px;
+  width: 90px;
 }
 .textarea {
   height: 20vh;
@@ -381,8 +397,41 @@ header {
   justify-content: space-evenly;
   height: 40vh;
 }
-.social-flex a {
-  border:1px solid black;
+.copy {
+  background-color: black;
+  color: white;
+  height: 35px;
+  width: 35px;
+  padding: 0.3em 0.4em;
+  border-radius: 6px;
+  margin-left: 1vw;
+  font-size: 1.1rem;
+  display: inline-flex;
+  vertical-align: top;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.copy-tooltext {
+  
+  position: absolute;
+  background-color: black;
+  padding: 0.3rem 0.5rem;
+ 
+  width: max-content;
+  border-radius: 7px;
+  left: 115%;
+  font-size: 0.8rem;
+  opacity: 0;
+  /* visibility: hidden; */
+  transition: 0.4s;
+}
+.copy:hover .copy-tooltext{
+  opacity: 0.9;
+}
+
+.social-flex a,.email {
+  border: 1px solid black;
   border-radius: 7px;
   padding: 0.3rem 0.4rem;
   color: black;
@@ -390,12 +439,18 @@ header {
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: 0.5s;
+  display: inline-flex;
 }
 
-.page-heading{
+.social-flex a:hover {
+  letter-spacing: 2px;
+}
+
+.page-heading {
   font-size: 2.7rem;
   font-weight: 500;
   position: absolute;
-  top: 20vh;
-  left: 6vw;
+  top: 21vh;
+  left: 8vw;
 }
