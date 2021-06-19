@@ -5,6 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 import SocialFlex from "./SocialLinks";
 import { useEffect } from "react";
 import { SiMinutemailer } from "react-icons/si";
+import { GrReactjs, GrNode } from "react-icons/gr";
+import { SiFirebase, SiHtml5 } from "react-icons/si";
 
 const Home = () => {
   const location = useLocation()
@@ -23,7 +25,7 @@ const Home = () => {
       <div className="intro slide">
         <div className="devdesign">
           <div>
-            Full Stack Developer <br /> And <br />{" "}
+            Full Stack Developer <br /> And <br />
             <div className="designer">Designer</div>
           </div>
         </div>
@@ -39,10 +41,18 @@ const Home = () => {
           <Tool width="79" toolname="CSS" />
         </div>
         <div className="preferred-stack">
-          Preferred Stack : <span>Firebase</span>
+          Preferred Stack :
+          <span>
+            Firebase <SiFirebase className="preferred-icon" />
+          </span>
+          <span>
+            React.js <GrReactjs className="preferred-icon" />
+          </span>
+          <span>
+            Node.js
+            <GrNode className="preferred-icon" />
+          </span>
           <span>Express.js</span>
-          <span>React.js</span>
-          <span>Node.js</span>
         </div>
       </div>
       <div className="slide">
@@ -60,7 +70,6 @@ const Home = () => {
             );
           })}
           <Link to="/projects" className="seemore">
-            
             See More {">"}
           </Link>
         </div>
