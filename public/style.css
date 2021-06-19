@@ -223,11 +223,7 @@ header {
   grid-template-columns: repeat(3, minmax(250px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.projects-page-grid {
-  height: auto;
-  position: relative;
-  margin-top: 4vh;
-}
+
 .project,
 .seemore {
   /* border: 1px solid black; */
@@ -413,11 +409,10 @@ header {
   position: relative;
 }
 .copy-tooltext {
-  
   position: absolute;
   background-color: black;
   padding: 0.3rem 0.5rem;
- 
+
   width: max-content;
   border-radius: 7px;
   left: 115%;
@@ -426,11 +421,12 @@ header {
   /* visibility: hidden; */
   transition: 0.4s;
 }
-.copy:hover .copy-tooltext{
+.copy:hover .copy-tooltext {
   opacity: 0.9;
 }
 
-.social-flex a,.email {
+.social-flex a,
+.email {
   border: 1px solid black;
   border-radius: 7px;
   padding: 0.3rem 0.4rem;
@@ -450,7 +446,38 @@ header {
 .page-heading {
   font-size: 2.7rem;
   font-weight: 500;
-  position: absolute;
-  top: 21vh;
-  left: 8vw;
+  position: relative;
+  margin-left: 8vw;
+  margin-top: 7vh;
+  /* top: 21vh;
+  left: 8vw; */
+}
+
+.projects-icons {
+  position: relative;
+  width: 100%;
+  font-size: 6.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10vh;
+}
+.react-icon{
+  animation: react 4s linear infinite;
+  transform-origin: center,center;
+}
+@keyframes react {
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform:rotateZ(360deg)
+  }
+}
+.projects-page-grid {
+  height: auto;
+  position: relative;
+  margin-top: 12vh;
+  margin-bottom: 11vh;
+  top: 0;
 }
