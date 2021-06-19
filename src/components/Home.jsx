@@ -37,7 +37,7 @@ const Home = () => {
         <div className="slide-heading">Projects</div>
         <div className="projects-grid">
           {projects.map((project) => {
-            if(!project.home) return;
+            if(!project.home) return '';
             return (
               <Project
                 name={project.name}
