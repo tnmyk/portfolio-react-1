@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-const Menu = ({ menuOn }) => {
+const Menu = ({ menuOn,handleClose }) => {
+  
   return (
     <div
       className="menu"
@@ -9,9 +10,15 @@ const Menu = ({ menuOn }) => {
         <div className="download-resume"> Download Resume 📄 (1.3MB)</div>
       </div>
       <div className="menu-second">
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/contact">Contact</Link>
+        <Link onClick={handleClose} to="/">
+          Home
+        </Link>
+        <Link onClick={handleClose} to="/projects">
+          Projects
+        </Link>
+        <Link onClick={handleClose} to="/contact">
+          Contact
+        </Link>
       </div>
     </div>
   );

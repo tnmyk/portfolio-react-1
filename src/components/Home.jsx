@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import Tool from "./Tool";
 import Project from "./Project";
 import projects from "../projects";
@@ -8,10 +7,11 @@ import SocialFlex from "./SocialLinks";
 import { SiMinutemailer } from "react-icons/si";
 
 const Home = () => {
+  
   return (
     <div className="home">
+      
       <div className="intro slide">
-        <Navbar />
         <div className="devdesign">
           <div>
             Full Stack Developer <br /> And <br />{" "}
@@ -37,6 +37,7 @@ const Home = () => {
         <div className="slide-heading">Projects</div>
         <div className="projects-grid">
           {projects.map((project) => {
+            if(!project.home) return;
             return (
               <Project
                 name={project.name}
@@ -56,7 +57,7 @@ const Home = () => {
         <div className="slide-heading">Contact Me</div>
         <div className="slide-subheading">Let's Build Something Together</div>
         <div className="contact-flex">
-          <SocialFlex/>
+          <SocialFlex />
           <div className="contact-form-flex">
             <h2>Send me a Message!</h2>
             <form
