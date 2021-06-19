@@ -207,6 +207,10 @@ header {
   font-size: 1.3rem;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: space-evenly;
+  width: 90%;
+  justify-content: space-evenly;
 }
 
 .projects-grid {

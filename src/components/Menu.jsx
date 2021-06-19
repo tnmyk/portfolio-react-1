@@ -16,7 +16,7 @@ const Menu = ({ menuOn,handleClose }) => {
         <Link onClick={handleClose} to="/projects">
           Projects
         </Link>
-        <Link onClick={handleClose} to="/contact">
+        <Link onClick={handleClose} to="/#contact">
           Contact
         </Link>
       </div>

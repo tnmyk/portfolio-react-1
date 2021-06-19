@@ -1,16 +1,25 @@
 import Tool from "./Tool";
 import Project from "./Project";
 import projects from "../projects";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SocialFlex from "./SocialLinks";
-
+import { useEffect } from "react";
 import { SiMinutemailer } from "react-icons/si";
 
 const Home = () => {
-  
+  const location = useLocation()
+  useEffect(() => {
+    if (location.hash) {
+      let elem = document.getElementById(location.hash.slice(1));
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  }, [location])
   return (
     <div className="home">
-      
       <div className="intro slide">
         <div className="devdesign">
           <div>
@@ -30,14 +39,17 @@ const Home = () => {
           <Tool width="79" toolname="CSS" />
         </div>
         <div className="preferred-stack">
-          Preferred Stack : Firebase, Express.js, React.js, Node.js
+          Preferred Stack : <span>Firebase</span>
+          <span>Express.js</span>
+          <span>React.js</span>
+          <span>Node.js</span>
         </div>
       </div>
       <div className="slide">
         <div className="slide-heading">Projects</div>
         <div className="projects-grid">
           {projects.map((project) => {
-            if(!project.home) return '';
+            if (!project.home) return "";
             return (
               <Project
                 name={project.name}
@@ -48,12 +60,12 @@ const Home = () => {
             );
           })}
           <Link to="/projects" className="seemore">
-            {" "}
+            
             See More {">"}
           </Link>
         </div>
       </div>
-      <div className="slide">
+      <div className="slide" id="contact">
         <div className="slide-heading">Contact Me</div>
         <div className="slide-subheading">Let's Build Something Together</div>
         <div className="contact-flex">
