@@ -12,6 +12,14 @@ const Navbar = () => {
       body.style.height = "100vh";
       body.style.overflowY = "hidden";
     }
+    if(!menuOn){
+      document.querySelector(".menuImg").style.backgroundImage =
+        "url(./menu-cross.svg)";
+    }
+    else {
+      document.querySelector(".menuImg").style.backgroundImage =
+        "url(./menu.png)";
+    }
     setMenuOn(!menuOn);
   }
   return (
@@ -21,14 +29,10 @@ const Navbar = () => {
         <Link to="/" className="logo">
           TANMAY KACHROO
         </Link>
-        {/* <div className="nav-links">
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
-        </div> */}
         <div
           className="menuImg"
           onClick={handleClose}
-          style={menuOn ? { backgroundImage: "url(./menu-cross.svg)" } : null}
+          // style={menuOn ? { backgroundImage: "url(./menu-cross.svg)" } : null}
         ></div>
       </header>
     </div>
