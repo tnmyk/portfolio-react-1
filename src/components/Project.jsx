@@ -14,7 +14,7 @@ const Project = ({ name, tools, des, id }) => {
         })}
       </div>
       <div className='project-img-container'>
-        <img src={"./project-images/" + id + ".png"} />
+        <img alt='' src={"./project-images/" + id + ".png"} />
         <div className="project-img-cover"> <FiExternalLink/></div>
       </div>
     </div>
