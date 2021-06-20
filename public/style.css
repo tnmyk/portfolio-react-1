@@ -10,6 +10,8 @@
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: none;
   /* cursor:none; */
+  
+   outline: 1px solid #f00 !important;
 }
 #cursor {
   width: 15px;
@@ -54,10 +56,12 @@
   width: 100%;
   z-index: -1000;
   opacity: 0.4;
+  width: 100vw;
 }
 body {
   height: 100vh;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 a {
   color: inherit;
@@ -273,7 +277,7 @@ header {
 .projects-flex {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 90vw;
   align-items: center;
   justify-content: space-evenly;
   padding-top: 20vh;
@@ -609,8 +613,8 @@ header {
 }
 @media only screen and (max-width:1000px) {
   .projects-flex{
-    margin-left: 3vw;
-    width: 100%;
+    /* margin-left: 3vw; */
+    width: 100vw;
     padding-bottom: 25vh;
   }
   .seemore{
@@ -710,6 +714,12 @@ header {
   .about-image{
     width: 35vw;
   }
+  .copy-tooltext{
+    left: -150%;
+    
+    top: 120%;
+    opacity: 1;
+  }
 }
 
 
@@ -765,5 +775,8 @@ header {
   }
   .progress{
     width: 10%;
+  }
+  .project-tools{
+    font-size: 80%;
   }
 }
