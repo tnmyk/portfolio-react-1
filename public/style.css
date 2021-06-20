@@ -611,7 +611,7 @@ header {
     height: 50%;
   }
 }
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:1100px) {
   .projects-flex{
     /* margin-left: 3vw; */
     width: 100vw;
@@ -644,7 +644,8 @@ header {
 
   }
   .project img{
-    height: 35vh;
+    /* height: 35vh; */
+    width: 80vw;
   }
   .contact-flex{
     flex-direction: column-reverse;
@@ -673,6 +674,9 @@ header {
 }
 
 @media only screen and (max-width:800px) {
+  header{
+    height: 10vh;
+  }
   .project img{
     height: auto;
     width: 80vw;
@@ -718,7 +722,7 @@ header {
     left: -150%;
     
     top: 120%;
-    opacity: 1;
+    
   }
 }
 
@@ -778,5 +782,14 @@ header {
   }
   .project-tools{
     font-size: 80%;
+  }
+  .contact-form input,.textarea{
+    font-size: 90%;
+  }
+  .textarea{
+    height: 16vh;
+  }
+  .contact-form button{
+    font-size: 90%;
   }
 }
