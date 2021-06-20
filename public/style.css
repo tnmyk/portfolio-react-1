@@ -105,7 +105,7 @@ header {
   background-position: center;
   right: 0;
   bottom: 0vh;
-  z-index: 2;
+  z-index: 1111;
   transition: background-image 0.5s ease-out;
   cursor: pointer;
 }
