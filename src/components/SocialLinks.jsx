@@ -8,7 +8,9 @@ const SocialFlex = () => {
     navigator.clipboard.writeText('tanmaykachroo@gmail.com');
     const toolText = document.querySelector('.copy-tooltext')
     toolText.textContent ='Email Copied!'
+    
     setTimeout(()=>{
+    
     toolText.textContent = "Copy Email";
 
     },2000)
