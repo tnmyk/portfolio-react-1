@@ -26,7 +26,26 @@
 ::-webkit-scrollbar {
   width: 0;
 }
-
+.banner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  border-right:1px solid gray;
+  z-index: 2111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: banner 1s forwards ;
+  animation-delay: 2s;
+}
+@keyframes banner {
+  100%{
+    transform: translateX(-100%);
+  }
+}
 .particles {
   position: fixed;
   top: 0;
@@ -37,7 +56,8 @@
   opacity: 0.4;
 }
 body {
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: hidden;
 }
 a {
   color: inherit;
@@ -86,14 +106,14 @@ header {
   cursor: pointer;
 }
 .menu {
-  height: 100vh;
+  height: 0;
   width: 100%;
   background-color: white;
   position: absolute;
-  top: -100vh;
-  transition: transform 0.5s ease-out;
+  top: 0vh;
+  transition:  0.5s ease-out;
   z-index: 1;
-
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,7 +162,7 @@ header {
 }
 .slide {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 .intro {
@@ -150,7 +170,8 @@ header {
   text-align: center;
   font-size: 3rem;
   font-weight: 400;
-  height: 100vh;
+  min-height: 90vh;
+  /* background-color: red; */
 }
 .devdesign {
   height: 85vh;
@@ -174,6 +195,31 @@ header {
   top: 3vh;
   left: 4vw;
 }
+.about-flex{
+  display: flex;
+  padding-top: 15vh;
+  height: 95vh;
+  align-items: center;
+  justify-content: center;
+}
+.about-image-container,.about-text-container{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-image-container{
+  width: 40%;
+}
+.about-image{
+  width: 300px;
+  border-radius: 50%;
+  
+}
+.about-text{
+  width: 80%;
+}
+
 .tools-container {
   position: absolute;
   width: 40%;
@@ -202,7 +248,7 @@ header {
 }
 .preferred-stack {
   position: absolute;
-  bottom: 11vh;
+  bottom: 9vh;
   font-weight: 500;
   font-size: 1rem;
   left: 50%;
@@ -212,53 +258,88 @@ header {
   width: 90%;
   justify-content: space-evenly;
 }
-.preferred-stack span{
+.preferred-stack span {
   display: flex;
   align-items: center;
-  
+
   /* background-color: red; */
 }
-.preferred-icon{
+.preferred-icon {
   margin-left: 5px;
 }
-.projects-grid {
-  height: 80vh;
-  width: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  top: 18vh;
-
-  /* grid */
-  display: grid;
-  gap: 1rem;
-   grid-template-columns: repeat(3, minmax(250px, 1fr));
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-columns: repeat(2,1fr); */
-  /* grid-template-columns: repeat(auto-fit,minmax(500px,1fr)); */
+.projects-flex {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 20vh;
+  min-height: 320vh;
+  padding-bottom: 30vh;
 }
 
 .project,
 .seemore {
   /* border: 1px solid black; */
-  height: 35vh;
-  width: 24vw;
-  border-radius: 7px;
+  height: 60vh;
+  /* width: 24vw; */
+  width: 800px;
+  border-radius: 25px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.774);
   color: white;
   background-color: rgb(51, 51, 51);
   transition: 0.5s ease-in-out;
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: pointer;
+  margin-bottom: 7vh;
 }
-
+.project {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.project-img-container {
+  position: absolute;
+  border-radius: 10px;
+  left: 65%;
+  height: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid black;
+  overflow: hidden;
+}
+.project img {
+  height: 100%;
+}
+.project-img-container:hover .project-img-cover{
+  background-color:rgba(0, 0, 0, 0.603) ;
+  color: white;
+}
+.project-img-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:transparent ;
+  
+  transition:  0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: transparent;
+}
 .project::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  /* bottom: 0px; */
+  top: 98%;
   width: 100%;
-  height: 7px;
+  height: 10px;
+
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
   overflow: hidden;
   background-image: linear-gradient(to right, purple, cyan, yellow);
   background-size: 200%;
@@ -273,12 +354,21 @@ header {
   }
 }
 .seemore {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   border: 1px solid gray;
   background-image: url("./afterbackground.gif");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  width: 500px;
   transition: 0.5s;
   letter-spacing: 2px;
+  height: 10vh;
+  bottom: 11vh;
 }
+
 .seemore:hover {
   letter-spacing: 3px;
   color: black;
@@ -304,25 +394,27 @@ header {
 }
 .project-name {
   position: absolute;
-  top: 3vh;
-  left: 2vw;
-  font-size: 1.3rem;
+  top: 8vh;
+  left: 3vw;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .project-des {
-  font-size: 0.8rem;
-  width: 85%;
+  font-size: 1.1rem;
+  width: 50%;
   position: absolute;
-  top: 11vh;
-  left: 3vw;
-  font-weight: 500;
+  top: 18vh;
+  left: 4vw;
+  font-weight: 400;
 }
 .project-tools {
   width: 85%;
   position: absolute;
-  bottom: 3vh;
+  bottom: 4vh;
   left: 2vw;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 .project-tool {
   margin-right: 8px;
@@ -476,16 +568,16 @@ header {
   justify-content: space-evenly;
   margin-top: 10vh;
 }
-.react-icon{
+.react-icon {
   animation: react 4s linear infinite;
-  transform-origin: center,center;
+  transform-origin: center, center;
 }
 @keyframes react {
-  0%{
+  0% {
     transform: rotateZ(0deg);
   }
-  100%{
-    transform:rotateZ(360deg)
+  100% {
+    transform: rotateZ(360deg);
   }
 }
 .projects-page-grid {
@@ -494,4 +586,9 @@ header {
   margin-top: 12vh;
   margin-bottom: 11vh;
   top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }

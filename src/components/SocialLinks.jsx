@@ -19,7 +19,7 @@ const SocialFlex = () => {
         <div className="email">
           <HiOutlineMail /> &nbsp;Email: tanmaykachroo@gmail.com
         </div>
-        <span class="copy" onClick={copyEmail}>
+        <span className="copy" onClick={copyEmail}>
           <BiClipboard /> <span className="copy-tooltext">Copy Email</span>
         </span>
       </div>

@@ -23,6 +23,7 @@ const Projects = () => {
               des={project.des}
               tools={project.tools}
               key={project.id}
+              id={project.id}
             />
           );
         })}

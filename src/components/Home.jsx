@@ -17,7 +17,7 @@ const Home = () => {
         elem.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      // window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
   }, [location])
   return (
@@ -27,6 +27,26 @@ const Home = () => {
           <div>
             Full Stack Developer <br /> And <br />
             <div className="designer">Designer</div>
+          </div>
+        </div>
+      </div>
+      <div className="slide">
+        <div className="slide-heading">About Me</div>
+        <div className="about-flex">
+          <div className="about-image-container">
+            <img src="./about-image.jpg" className="about-image" />
+          </div>
+          <div className="about-text-container">
+            <div className="about-text">
+              Hi, I'm Tanmay Kachroo, a passionate self-taught frontEnd web
+              developer from India. I tend to make use of modern web
+              technologies to build websites that look great, feel fantastic,
+              and function correctly. I am especially focusing on Reactjs.{" "}
+              <br />
+              <br />  Since I love both
+              programming and designing, I'm also interested in creating
+              programmatic designs and creative coding projects.
+            </div>
           </div>
         </div>
       </div>
@@ -57,7 +77,7 @@ const Home = () => {
       </div>
       <div className="slide">
         <div className="slide-heading">Projects</div>
-        <div className="projects-grid">
+        <div className="projects-flex">
           {projects.map((project) => {
             if (!project.home) return "";
             return (
@@ -66,6 +86,7 @@ const Home = () => {
                 des={project.des}
                 tools={project.tools}
                 key={project.id}
+                id={project.id}
               />
             );
           })}

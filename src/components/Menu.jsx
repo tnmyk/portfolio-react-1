@@ -4,7 +4,7 @@ const Menu = ({ menuOn,handleClose }) => {
   return (
     <div
       className="menu"
-      style={menuOn ? { transform: "translateY(100vh)" } : null}
+      style={menuOn ? { height:'100vh' } : null}
     >
       <div className="menu-first">
         <div className="download-resume"> Download Resume 📄 (1.3MB)</div>
