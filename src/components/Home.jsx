@@ -6,7 +6,7 @@ import SocialFlex from "./SocialLinks";
 import { useEffect } from "react";
 import { SiMinutemailer } from "react-icons/si";
 import { GrReactjs, GrNode } from "react-icons/gr";
-import { SiFirebase, SiHtml5 } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
 
 const Home = () => {
   const location = useLocation()
@@ -34,7 +34,7 @@ const Home = () => {
         <div className="slide-heading">About Me</div>
         <div className="about-flex">
           <div className="about-image-container">
-            <img src="./about-image.jpg" className="about-image" />
+            <img alt='' src="./about-image.jpg" className="about-image" />
           </div>
           <div className="about-text-container">
             <div className="about-text">

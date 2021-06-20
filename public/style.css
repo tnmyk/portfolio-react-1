@@ -201,6 +201,7 @@ header {
   height: 95vh;
   align-items: center;
   justify-content: center;
+  
 }
 .about-image-container,.about-text-container{
   width: 50%;
@@ -237,6 +238,8 @@ header {
   align-items: center;
 }
 .tool-name {
+  position: absolute;
+  right: 0;
   margin-left: 1vw;
   font-weight: 500;
   font-size: 1.2rem;
@@ -303,8 +306,8 @@ header {
   border-radius: 10px;
   left: 65%;
   height: 60%;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 50%;
+  transform: translateY(50%);
   border: 1px solid black;
   overflow: hidden;
 }
@@ -591,4 +594,176 @@ header {
   flex-direction: column;
   align-items: center;
   
+}
+
+
+
+@media only screen and (max-width:1400px) {
+  
+  .project{
+    height: 50vh;
+  }
+  .project-img-container{
+    height: 50%;
+  }
+}
+@media only screen and (max-width:1000px) {
+  .projects-flex{
+    margin-left: 3vw;
+    width: 100%;
+    padding-bottom: 25vh;
+  }
+  .seemore{
+    bottom: 4vh;
+  }
+  .tools-container{
+    width: 60%;
+  }
+  .project{
+    height: auto;
+    width: 90vw;
+    min-height: 80vh;
+   
+  }
+  .project-des{
+    width: 80%;
+  }
+  .project-img-container{
+    position: relative;
+    /* top: 0; */
+    left: 50%;
+    bottom: 0;
+    top: 33vh;
+    transform: translateX(-50%);
+    width: max-content;
+  border-radius: 20px;
+
+  }
+  .project img{
+    height: 35vh;
+  }
+  .contact-flex{
+    flex-direction: column-reverse;
+    height: 120vh;
+  }
+  .contact-form{
+    height: 50vh;
+  }
+  .contact-form input,.textarea{
+    font-size: 150%;
+
+  }
+  .contact-form button{
+    font-size: 120%;
+    width: max-content;
+    height: max-content;
+    padding: 0.3rem 0.5rem;
+  }
+  .textarea{
+    width: 100%;
+  }
+  .social-flex{
+    width: 50%;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .project img{
+    height: auto;
+    width: 80vw;
+  }
+  .seemore{
+    width: 60vw;
+    height: 7vh;
+    border-radius: 19px;
+  }
+  .project{
+    min-height: 75vh;
+  }
+  .about-flex{
+    flex-direction: column;
+    padding-top: 25vh;
+    padding-bottom: 15vh;
+  }
+  .about-text-container{
+    margin-top: 10vh;
+    width: 80%;
+    font-size: 110%;
+  }
+  .tools-container{
+    width: 70%;
+  }
+    .social-flex{
+      width: 100%;
+      margin-left: 0vw;
+      padding-left: 20vw;
+    }
+}
+@media only screen and (max-width:650px) {
+  .project{
+    min-height:70vh;
+  }
+  .tools-container{
+    width: 90%;
+  }
+  .about-image{
+    width: 35vw;
+  }
+}
+
+
+@media only screen and (max-width:520px) {
+  
+  .project-img-container{
+      top: 36vh;
+  }
+  .tool-name{
+    font-size: 90%;
+  }
+  .preferred-stack{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    bottom: 7vh;
+  }
+
+  .projects-flex{
+    
+    padding-bottom: 19vh;
+  }
+  .seemore{
+    bottom: 1vh;
+  }
+  .contact-form-flex{
+    width: 100%;
+  }
+
+  .social-flex{
+    width: 100%;
+    margin-left: 0vw;
+    padding-left: 10vw;
+  }
+  .about-flex{
+    flex-direction: column;
+    padding-top: 55vh;
+    padding-bottom: 40vh;
+  }
+  .tools-container{
+    width: 85%;
+  }
+  
+}
+
+@media only screen and (max-width:450px) {
+  .social-flex{
+    font-size: 90%;
+  }
+  .about-text{
+    width: 95%;
+  }
+  .progress{
+    width: 10 %;
+  }
 }
