@@ -792,4 +792,24 @@ header {
   .contact-form button{
     font-size: 90%;
   }
+  .progress{
+    transform-origin: left;
+    transform: scaleX(0.8);
+  }
+}
+@media only screen and (max-width:400px) {
+  .progress{
+    transform: scaleX(0.7);
+  }
+}
+@media only screen and (max-width:360px) {
+  .tools-container{
+    width: 95%;
+  }
+  .social-flex{
+    padding-left: 0;
+  }
+  .social-flex div .email,a{
+    font-size: 80%;
+  }
 }
