@@ -674,6 +674,26 @@ header {
 }
 
 @media only screen and (max-width:800px) {
+  
+  .menu{
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .menu-second{
+    /* background-color: violet; */
+    height: 20vh;
+  }
+  .menu-first{
+    height: 10vh;
+    /* background-color: blue; */
+    width: max-content;
+  }
+  .menu-first a{
+    font-size: 150%;
+  }
+  .menu-second a{
+    font-size: 150%;
+  }
   header{
     height: 10vh;
   }

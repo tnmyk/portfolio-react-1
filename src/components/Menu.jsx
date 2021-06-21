@@ -7,7 +7,7 @@ const Menu = ({ menuOn,handleClose }) => {
       style={menuOn ? { height:'100vh' } : null}
     >
       <div className="menu-first">
-        <div className="download-resume"> Download Resume 📄 (1.3MB)</div>
+        <a href='/tanmay-kachroo-resume.pdf' target='_blank' className="download-resume"> Download Resume 📄 (1.3MB)</a>
       </div>
       <div className="menu-second">
         <Link onClick={handleClose} to="/">
