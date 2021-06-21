@@ -684,12 +684,12 @@ header {
     height: 20vh;
   }
   .menu-first{
-    height: 10vh;
+    height: 20vh;
     /* background-color: blue; */
     width: max-content;
   }
   .menu-first a{
-    font-size: 150%;
+    font-size: 100%;
   }
   .menu-second a{
     font-size: 150%;
